@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="Current">
+  <PropertyGroup>
+    <TargetFramework>net46</TargetFramework>
+    <AssemblyName>mp18_plugin</AssemblyName>
+    <Description>My first plugin</Description>
+    <Version>1.0.0</Version>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+    <FileUpgradeFlags>40</FileUpgradeFlags>
+    <UpgradeBackupLocation>C:\Users\Thomas PC\Desktop\bepinex projects\mp18_plugin\Backup1\</UpgradeBackupLocation>
+    <OldToolsVersion>Current</OldToolsVersion>
+    <BaseOutputPath>D:\Steam\steamapps\common\Receiver 2\BepInEx\plugins\MP18</BaseOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
+    <PackageReference Include="BepInEx.Core" Version="5.*" />
+    <PackageReference Include="BepInEx.PluginInfoProps" Version="1.*" />
+    <PackageReference Include="UnityEngine.Modules" Version="2019.4.29" IncludeAssets="compile" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>libraries\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx">
+      <HintPath>libraries\BepInEx.dll</HintPath>
+    </Reference>
+    <Reference Include="Receiver2ModdingKit">
+      <HintPath>libraries\Receiver2ModdingKit.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>libraries\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="Wolfire">
+      <HintPath>libraries\Wolfire.dll</HintPath>
+    </Reference>
+    <Reference Include="Wolfire.Receiver2">
+      <HintPath>libraries\Wolfire.Receiver2.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
